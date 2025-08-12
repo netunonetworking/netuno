@@ -72,7 +72,10 @@ function FooterSection({ title, children }: FooterSectionProps) {
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col justify-center items-center bg-netuno-dark py-20 px-16">
+    <footer
+      id="contato"
+      className="flex flex-col justify-center items-center bg-netuno-dark py-20 px-16"
+    >
       <div className="flex flex-col items-start gap-16 max-w-5xl w-full pt-16">
         <div className="flex items-start gap-8 w-full pb-16 border-b border-netuno-text-secondary">
           <NetunoLogoWhite />

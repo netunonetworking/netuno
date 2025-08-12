@@ -1,13 +1,29 @@
+import { useEffect } from "react";
+
 export default function WhatWeDo() {
+  useEffect(() => {
+    // Verifica se há um hash na URL
+    if (window.location.hash === "#quem-somos") {
+      // Rola suavemente para a seção
+      const element = document.getElementById("quem-somos");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, []);
+
   return (
-    <section className="flex flex-col items-center bg-white py-24 px-16">
+    <section
+      id="quem-somos"
+      className="flex flex-col items-center bg-white py-24 px-16"
+    >
       <div
         className="flex flex-col items-center gap-16 max-w-5xl w-full"
         style={{ maxWidth: "1280px" }}
       >
         <div className="flex flex-col items-center gap-4 w-full">
           <h2 className="text-center text-netuno-text-primary font-figtree text-4xl font-semibold leading-tight">
-            O que fazemos
+            Quem somos e o que fazemos?
           </h2>
 
           <p className="text-center text-netuno-text-tertiary font-figtree text-xl leading-relaxed">

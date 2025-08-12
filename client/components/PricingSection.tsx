@@ -59,24 +59,6 @@ const WarningIcon: React.FC<IconProps> = ({ className = "" }) => (
   </svg>
 );
 
-export function BenefitsSection() {
-  return (
-    <div className="flex-1">
-      <div className="flex items-center mb-4">
-        <GiftIcon className="h-6 w-6 text-purple-500 mr-3" />
-        <h4 className="text-xl font-semibold text-gray-800">Benefícios:</h4>
-      </div>
-      <div className="space-y-3">
-        <div className="flex items-start">
-          <CheckCircleIcon className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-          <span className="text-gray-700">Preço acessível</span>
-        </div>
-        {/* Restante do código */}
-      </div>
-    </div>
-  );
-}
-
 export default function PricingSection() {
   return (
     <section className="flex flex-col items-center bg-white py-24 px-4 sm:px-8 lg:px-16">

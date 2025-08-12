@@ -25,13 +25,36 @@ export default function Header() {
 
             <nav className="flex items-center gap-4">
               <Link
-                to="/quem-somos"
+                to="#quem-somos"
+                onClick={(e) => {
+                  e.preventDefault(); // Impede o comportamento padrão do link
+                  const element = document.getElementById("quem-somos");
+                  if (element) {
+                    element.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start", // Alinha ao topo da viewport
+                    });
+                  }
+                }}
                 className="text-netuno-text-secondary font-figtree text-base hover:text-netuno-blue transition-colors"
               >
                 Quem Somos
               </Link>
               <Link
-                to="/contato"
+                to="#contato"
+                onClick={(e) => {
+                  e.preventDefault(); // Impede o comportamento padrão do link
+                  const footer = document.getElementById("contato");
+                  if (footer) {
+                    footer.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start", // Alinha ao topo da viewport
+                    });
+
+                    // Opcional: Atualiza a URL sem recarregar a página
+                    window.history.pushState(null, "", "#contato");
+                  }
+                }}
                 className="text-netuno-text-secondary font-figtree text-base hover:text-netuno-blue transition-colors"
               >
                 Contato
