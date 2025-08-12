@@ -81,17 +81,18 @@ export default function Footer() {
           <NetunoLogoWhite />
 
           <div className="flex justify-end items-start gap-8 flex-1">
-            <FooterSection title="Produto">
+            <FooterSection title="Sobre">
+              <FooterLink href="/quem-somos">Quem somos</FooterLink>
               <FooterLink href="/contato">Contato</FooterLink>
               <FooterLink href="/portfolio">Portifólio</FooterLink>
-              <FooterLink href="/quem-somos">Quem Somos</FooterLink>
             </FooterSection>
 
-            <FooterSection title="Produto">
+            <FooterSection title="Política">
               <FooterLink href="/privacidade">
                 Politica de privacidade
               </FooterLink>
               <FooterLink href="/termos">Termos de uso</FooterLink>
+              <FooterLink href="/faq">Perguntas Frequentes</FooterLink>
             </FooterSection>
           </div>
         </div>
