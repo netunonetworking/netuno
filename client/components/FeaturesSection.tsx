@@ -15,12 +15,12 @@ function Feature({ title, description }: FeatureProps) {
           style={{ aspectRatio: "1.42" }}
         />
       </div>
-      
+
       <div className="flex flex-col items-center gap-2 w-full">
         <h3 className="text-center text-netuno-text-primary font-figtree text-xl font-semibold leading-relaxed">
           {title}
         </h3>
-        
+
         <p className="text-center text-netuno-text-tertiary font-figtree text-base leading-relaxed">
           {description}
         </p>
@@ -32,17 +32,20 @@ function Feature({ title, description }: FeatureProps) {
 export default function FeaturesSection() {
   return (
     <section className="flex flex-col items-center bg-white py-24 px-16">
-      <div className="flex flex-col items-center gap-16 max-w-5xl w-full" style={{ maxWidth: "1280px" }}>
+      <div
+        className="flex flex-col items-center gap-16 max-w-5xl w-full"
+        style={{ maxWidth: "1280px" }}
+      >
         <div className="flex flex-col items-center gap-4 w-full">
           <h2 className="text-center text-netuno-text-primary font-figtree text-4xl font-semibold leading-tight">
             Por que escolher a Netuno?
           </h2>
-          
+
           <p className="text-center text-netuno-text-tertiary font-figtree text-xl leading-relaxed">
             Uma pergunta que você não precisa ter em sua mente
           </p>
         </div>
-        
+
         <div className="flex items-start gap-8 w-full max-w-5xl">
           <Feature
             title="Tecnologias Modernas"
@@ -59,12 +62,6 @@ export default function FeaturesSection() {
             description="Temos experiência para construir desde páginas simples até sistemas robustos quando o projeto crescer."
           />
         </div>
-
-        <button
-          className="bg-netuno-blue text-white rounded-2xl text-center cursor-pointer font-semibold text-sm px-[18px] py-2 h-[42px] border border-[rgb(95,125,255)]"
-        >
-          Começar agora
-        </button>
       </div>
     </section>
   );
