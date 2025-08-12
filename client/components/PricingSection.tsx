@@ -1,6 +1,13 @@
 import React from "react";
 import { RocketLaunchIcon } from "@heroicons/react/24/outline";
 import { Button } from "./ui/button";
+import {
+  SparklesIcon,
+  GiftIcon,
+  CurrencyDollarIcon,
+  CheckCircleIcon,
+  ExclamationTriangleIcon,
+} from "@heroicons/react/24/outline";
 
 interface IconProps {
   className?: string;
@@ -137,7 +144,7 @@ export default function PricingSection() {
           </div>
         </div>
 
-        {/* Test Plan Section */}
+        {/* Plano Teste */}
         <div className="w-full py-20 bg-gradient-to-br from-blue-50 to-blue-100">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
@@ -145,14 +152,14 @@ export default function PricingSection() {
                 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
                   🚀 Plano Teste Netuno
                 </h2>
-                <p className="text-xl text-gray-700 mb-2">
-                  Experimente antes de investir
-                </p>
                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                   Quer tirar sua ideia do papel rápido, gastando pouco e sem
-                  risco? Nosso Plano Teste é a oportunidade perfeita para criar
-                  um site, sistema ou landing page funcional em poucos dias e
-                  ver na prática os resultados para o seu negócio.
+                  risco?
+                </p>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Nosso Plano Teste é a oportunidade perfeita para criar um
+                  site, sistema ou landing page funcional em poucos dias e ver
+                  na prática os resultados para o seu negócio.
                 </p>
               </div>
 
@@ -213,8 +220,8 @@ export default function PricingSection() {
                           Decisão final
                         </h4>
                         <p className="text-gray-600">
-                          Transforme em definitivo com desconto especial (20-30%
-                          OFF)
+                          Se gostar transformamos em definitivo com desconto
+                          especial (20-30% OFF)
                         </p>
                       </div>
                     </div>
@@ -222,117 +229,111 @@ export default function PricingSection() {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6 mb-12">
-                <div className="border border-gray-200 p-6 rounded-lg bg-white">
-                  <div className="mb-6">
-                    <h4 className="text-xl font-semibold mb-4">
-                      O que você pode criar:
-                    </h4>
+              <div className="grid grid-cols-1 gap-6 mb-12">
+                {/* Card Retangular Horizontal */}
+                <div className="border border-gray-200 p-6 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row gap-8">
+                  {/* Coluna Esquerda - O que pode criar */}
+                  <div className="flex-1">
+                    <div className="flex items-center mb-4">
+                      <SparklesIcon className="h-6 w-6 text-blue-500 mr-3" />
+                      <h4 className="text-xl font-semibold text-gray-800">
+                        O que você pode criar:
+                      </h4>
+                    </div>
                     <div className="space-y-3">
-                      <div className="flex items-center">
-                        <CheckIcon className="h-5 w-5 text-green-500 mr-3" />
-                        <span>Landing Page para captação de clientes</span>
-                      </div>
-                      <div className="flex items-center">
-                        <CheckIcon className="h-5 w-5 text-green-500 mr-3" />
-                        <span>Site institucional moderno e responsivo</span>
-                      </div>
-                      <div className="flex items-center">
-                        <CheckIcon className="h-5 w-5 text-green-500 mr-3" />
-                        <span>
-                          Sistema simples (agendamentos, catálogos, vendas
-                          online)
+                      <div className="flex items-start">
+                        <CheckCircleIcon className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">
+                          Landing Pages profissionais
                         </span>
                       </div>
-                      <div className="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
-                        <WarningIcon className="inline mr-2" />
-                        <span className="text-sm text-yellow-800">
-                          Projetos complexos (ERP, hospitalar, marketplace) não
-                          estão disponíveis no Plano Teste
+                      <div className="flex items-start">
+                        <CheckCircleIcon className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">
+                          Sites institucionais responsivos
+                        </span>
+                      </div>
+                      <div className="flex items-start">
+                        <CheckCircleIcon className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">
+                          Sistemas básicos de gestão
                         </span>
                       </div>
                     </div>
-                  </div>
-
-                  <div className="border-t pt-6">
-                    <h4 className="text-xl font-semibold mb-4">Valor</h4>
-                    <div className="space-y-3">
-                      <div className="flex items-center">
-                        <CheckIcon className="h-5 w-5 text-green-500 mr-3" />
-                        <span className="font-medium">R$ 79,00 (normal)</span>
-                      </div>
-                      <div className="flex items-center">
-                        <CheckIcon className="h-5 w-5 text-green-500 mr-3" />
-                        <span className="font-medium">
-                          Promoção: R$ 59,00 (primeiras 5 empresas/mês)
-                        </span>
-                      </div>
-                      <div className="flex items-center">
-                        <CheckIcon className="h-5 w-5 text-green-500 mr-3" />
-                        <span>Duração: 30 dias de uso</span>
-                      </div>
-                      <div className="flex items-center">
-                        <CheckIcon className="h-5 w-5 text-green-500 mr-3" />
-                        <span>Sem fidelidade: continue só se gostar</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="border border-gray-200 p-6 rounded-lg bg-white">
-                  <h4 className="text-xl font-semibold mb-4">
-                    Benefícios exclusivos:
-                  </h4>
-                  <div className="space-y-3">
-                    <div className="flex items-center">
-                      <CheckIcon className="h-5 w-5 text-green-500 mr-3" />
-                      <span>Preço acessível para começar sem medo</span>
-                    </div>
-                    <div className="flex items-center">
-                      <CheckIcon className="h-5 w-5 text-green-500 mr-3" />
-                      <span>Entrega rápida: 3 a 10 dias úteis</span>
-                    </div>
-                    <div className="flex items-center">
-                      <CheckIcon className="h-5 w-5 text-green-500 mr-3" />
-                      <span>
-                        Descontos progressivos na conversão (20-30% OFF)
+                    <div className="mt-4 p-3 bg-amber-50 border border-amber-100 rounded-lg text-sm">
+                      <ExclamationTriangleIcon className="inline h-5 w-5 text-amber-500 mr-2" />
+                      <span className="text-amber-800">
+                        Projetos complexos, com alta regra de negócio, não estão
+                        disponíveis no Plano Teste.
                       </span>
                     </div>
-                    <div className="flex items-center">
-                      <CheckIcon className="h-5 w-5 text-green-500 mr-3" />
-                      <span>
-                        Sem fidelidade: continue apenas se estiver satisfeito
-                      </span>
+                  </div>
+
+                  {/* Coluna Central - Benefícios */}
+                  <div className="flex-1">
+                    <div className="flex items-center mb-4">
+                      <GiftIcon className="h-6 w-6 text-purple-500 mr-3" />
+                      <h4 className="text-xl font-semibold text-gray-800">
+                        Benefícios:
+                      </h4>
                     </div>
-                    <div className="flex items-center">
-                      <CheckIcon className="h-5 w-5 text-green-500 mr-3" />
-                      <span>Hospedagem e suporte inclusos durante o teste</span>
+                    <div className="space-y-3">
+                      <div className="flex items-start">
+                        <CheckCircleIcon className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">Preço acessível</span>
+                      </div>
+                      <div className="flex items-start">
+                        <CheckCircleIcon className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">
+                          Entrega rápida (3-10 dias)
+                        </span>
+                      </div>
+                      <div className="flex items-start">
+                        <CheckCircleIcon className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">
+                          Descontos de 20-30% OFF
+                        </span>
+                      </div>
+                      <div className="flex items-start">
+                        <CheckCircleIcon className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">Sem fidelidade</span>
+                      </div>
                     </div>
                   </div>
 
-                  <div className="mt-6 pt-6 border-t">
-                    <h4 className="text-xl font-semibold mb-4">
-                      Por que escolher a Netuno?
-                    </h4>
-                    <div className="space-y-3">
-                      <div className="flex items-start">
-                        <CheckIcon className="h-5 w-5 text-green-500 mr-3 mt-0.5" />
-                        <span>
-                          Tecnologias modernas para desenvolvimento rápido e
-                          performance
+                  {/* Coluna Direita - Valor */}
+                  <div className="flex-1">
+                    <div className="flex items-center mb-4">
+                      <CurrencyDollarIcon className="h-6 w-6 text-emerald-500 mr-3" />
+                      <h4 className="text-xl font-semibold text-gray-800">
+                        Investimento:
+                      </h4>
+                    </div>
+                    <div className="space-y-4">
+                      <div className="flex justify-between items-center bg-gray-50 p-3 rounded-lg">
+                        <span className="text-gray-700">Normal:</span>
+                        <span className="line-through text-gray-400">
+                          R$ 79,00
+                        </span>
+                      </div>
+                      <div className="flex justify-between items-center bg-emerald-50 p-3 rounded-lg border border-emerald-100">
+                        <span className="text-gray-700 font-medium">
+                          Promoção:
+                        </span>
+                        <span className="text-emerald-600 font-bold text-lg">
+                          R$ 59,00
                         </span>
                       </div>
                       <div className="flex items-start">
-                        <CheckIcon className="h-5 w-5 text-green-500 mr-3 mt-0.5" />
-                        <span>
-                          Soluções adaptadas à sua necessidade, sem complicação
+                        <CheckCircleIcon className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">
+                          Duração: 30 dias de uso
                         </span>
                       </div>
                       <div className="flex items-start">
-                        <CheckIcon className="h-5 w-5 text-green-500 mr-3 mt-0.5" />
-                        <span>
-                          Experiência em projetos desde simples até sistemas
-                          robustos
+                        <CheckCircleIcon className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">
+                          Sem fidelidade: continue só se gostar
                         </span>
                       </div>
                     </div>
@@ -346,11 +347,8 @@ export default function PricingSection() {
                   className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg"
                 >
                   <RocketLaunchIcon className="mr-2 h-5 w-5" />
-                  Começar Plano Teste Agora (R$ 59,00 promoção)
+                  Começar Plano Teste (R$ 59,00 promoção)
                 </Button>
-                <p className="mt-3 text-sm text-gray-500">
-                  Promoção válida para as primeiras 5 empresas deste mês
-                </p>
               </div>
             </div>
           </div>
