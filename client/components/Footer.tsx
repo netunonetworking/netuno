@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, LinkProps } from "react-router-dom";
 
 const NetunoLogoWhite = () => (
   <svg viewBox="0 0 555 130" className="h-32 max-w-md flex-1 aspect-[209/49]">
@@ -42,11 +42,31 @@ interface FooterLinkProps {
   children: React.ReactNode;
 }
 
-function FooterLink({ href, children }: FooterLinkProps) {
-  return (
+interface FooterLinkProps
+  extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  href: string;
+  children: React.ReactNode;
+}
+
+function FooterLink({ href, children, ...props }: FooterLinkProps) {
+  // Verifica se é um link externo (começa com http ou https)
+  const isExternal = href.startsWith("http");
+
+  return isExternal ? (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-white font-figtree text-sm font-medium leading-tight hover:text-netuno-blue-light transition-colors"
+      {...props}
+    >
+      {children}
+    </a>
+  ) : (
     <Link
       to={href}
       className="text-white font-figtree text-sm font-medium leading-tight hover:text-netuno-blue-light transition-colors"
+      {...props}
     >
       {children}
     </Link>
@@ -82,8 +102,10 @@ export default function Footer() {
 
           <div className="flex justify-end items-start gap-8 flex-1">
             <FooterSection title="Sobre">
-              <FooterLink href="/quem-somos">Quem somos</FooterLink>
-              <FooterLink href="/contato">Contato</FooterLink>
+              <FooterLink href="/servicos">Serviços</FooterLink>
+              <FooterLink href="https://linktr.ee/othaviolr">
+                Contato
+              </FooterLink>
               <FooterLink href="/portfolio">Portifólio</FooterLink>
             </FooterSection>
 

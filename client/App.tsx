@@ -6,10 +6,11 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import Orcamento from "./pages/Orcamento";
+import Servicos from "./pages/Servicos";
 import Faq from "./pages/Faq";
 import Portfolio from "./pages/Portfolio";
 import NotFound from "./pages/NotFound";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 // Configuração do QueryClient com opções padrão
 const queryClient = new QueryClient({
@@ -40,15 +41,16 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider delayDuration={300}>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
 
           {/* Rotas com Layout comum */}
           <Route
-            path="/orcamento"
+            path="/servicos"
             element={
               <Layout>
-                <Orcamento />
+                <Servicos />
               </Layout>
             }
           />
