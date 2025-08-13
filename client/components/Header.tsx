@@ -15,58 +15,54 @@ const NetunoLogo = () => (
 
 export default function Header() {
   return (
-    <header className="relative">
-      <div className="absolute top-16 left-1/2 transform -translate-x-1/2 z-10">
-        <div className="flex items-center justify-center bg-white rounded-full px-6 py-4 shadow-sm border border-gray-200 max-w-[640px] gap-8">
-          <div className="flex items-center gap-16">
-            <Link to="/" className="flex items-center">
-              <NetunoLogo />
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm py-4">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between">
+          <Link to="/" className="flex items-center">
+            <NetunoLogo />
+          </Link>
+
+          <nav className="flex items-center gap-8">
+            <Link
+              to="#quem-somos"
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById("quem-somos");
+                if (element) {
+                  element.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }
+              }}
+              className="text-netuno-text-secondary font-figtree text-base hover:text-netuno-blue transition-colors"
+            >
+              Quem Somos
             </Link>
-
-            <nav className="flex items-center gap-4">
-              <Link
-                to="#quem-somos"
-                onClick={(e) => {
-                  e.preventDefault(); // Impede o comportamento padrão do link
-                  const element = document.getElementById("quem-somos");
-                  if (element) {
-                    element.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start", // Alinha ao topo da viewport
-                    });
-                  }
-                }}
-                className="text-netuno-text-secondary font-figtree text-base hover:text-netuno-blue transition-colors"
-              >
-                Quem Somos
-              </Link>
-              <Link
-                to="#contato"
-                onClick={(e) => {
-                  e.preventDefault(); // Impede o comportamento padrão do link
-                  const footer = document.getElementById("contato");
-                  if (footer) {
-                    footer.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start", // Alinha ao topo da viewport
-                    });
-
-                    // Opcional: Atualiza a URL sem recarregar a página
-                    window.history.pushState(null, "", "#contato");
-                  }
-                }}
-                className="text-netuno-text-secondary font-figtree text-base hover:text-netuno-blue transition-colors"
-              >
-                Contato
-              </Link>
-              <Link
-                to="/portfolio"
-                className="text-netuno-text-secondary font-figtree text-base hover:text-netuno-blue transition-colors"
-              >
-                Portifólio
-              </Link>
-            </nav>
-          </div>
+            <Link
+              to="/portfolio"
+              className="text-netuno-text-secondary font-figtree text-base hover:text-netuno-blue transition-colors"
+            >
+              Portfólio
+            </Link>
+            <Link
+              to="#contato"
+              onClick={(e) => {
+                e.preventDefault();
+                const footer = document.getElementById("contato");
+                if (footer) {
+                  footer.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                  window.history.pushState(null, "", "#contato");
+                }
+              }}
+              className="text-netuno-text-secondary font-figtree text-base hover:text-netuno-blue transition-colors"
+            >
+              Saiba Mais
+            </Link>
+          </nav>
         </div>
       </div>
     </header>
