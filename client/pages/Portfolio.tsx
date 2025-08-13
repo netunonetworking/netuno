@@ -8,7 +8,7 @@ type Project = {
   title: string;
   description: string;
   tags: string[];
-  imageUrl: string;
+  image: string;
   link?: string;
 };
 
@@ -20,11 +20,11 @@ export default function Portfolio() {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Design de Interface Moderna",
+      title: "Sistema de Livraria",
       description:
-        "Criação de interface de usuário para aplicativo financeiro com foco em experiência do usuário.",
-      tags: ["UI/UX", "Web Design"],
-      imageUrl: "/portfolio/projeto1.jpg",
+        "Criação de um Sistema e-commerce e interatividade de Livros",
+      tags: ["Sistema", "Web Design"],
+      image: "/projeto1.png",
       link: "https://exemplo.com/projeto1",
     },
     {
@@ -33,7 +33,7 @@ export default function Portfolio() {
       description:
         "Desenvolvimento completo de sistema ERP personalizado para indústria de médio porte.",
       tags: ["Desenvolvimento", "Sistemas"],
-      imageUrl: "/portfolio/projeto2.jpg",
+      image: "/portfolio/projeto2.jpg",
     },
     {
       id: 3,
@@ -41,7 +41,7 @@ export default function Portfolio() {
       description:
         "Estratégia completa de marketing digital que aumentou conversões em 150%.",
       tags: ["Marketing", "Branding"],
-      imageUrl: "/portfolio/projeto3.jpg",
+      image: "/portfolio/projeto3.jpg",
     },
     {
       id: 4,
@@ -49,7 +49,7 @@ export default function Portfolio() {
       description:
         "Aplicativo de saúde e bem-estar com integração a wearables.",
       tags: ["Mobile", "UI/UX"],
-      imageUrl: "/portfolio/projeto4.jpg",
+      image: "/portfolio/projeto4.jpg",
     },
     {
       id: 5,
@@ -57,7 +57,7 @@ export default function Portfolio() {
       description:
         "Atualização completa do website corporativo com foco em performance e SEO.",
       tags: ["Web Design", "SEO"],
-      imageUrl: "/portfolio/projeto5.jpg",
+      image: "/portfolio/projeto5.jpg",
     },
     {
       id: 6,
@@ -65,7 +65,7 @@ export default function Portfolio() {
       description:
         "Automação de processos internos reduzindo tempo de operação em 70%.",
       tags: ["Desenvolvimento", "Automação"],
-      imageUrl: "/portfolio/projeto6.jpg",
+      image: "/portfolio/projeto6.jpg",
     },
   ];
 
@@ -158,7 +158,7 @@ function ProjectCard({ project }: { project: Project }) {
     >
       <div className="relative overflow-hidden h-64">
         <img
-          src={project.imageUrl}
+          src={project.image}
           alt={project.title}
           className={`w-full h-full object-cover transition-transform duration-500 ${
             isHovered ? "scale-110" : "scale-100"
@@ -174,7 +174,13 @@ function ProjectCard({ project }: { project: Project }) {
             isHovered ? "translate-y-0" : "translate-y-10"
           }`}
         >
-          <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+          <h3
+            className="text-xl font-bold text-white mb-2 
+              drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]
+              border-b border-white/20 pb-1"
+          >
+            {project.title}
+          </h3>
           <div className="flex flex-wrap gap-2 mb-3">
             {project.tags.map((tag) => (
               <span
