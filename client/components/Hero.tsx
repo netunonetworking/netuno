@@ -19,7 +19,7 @@ export default function Hero() {
         </p>
 
         <Link
-          to="/orcamento"
+          to="/servicos"
           className="inline-flex items-center justify-center bg-netuno-blue text-white rounded-2xl text-center cursor-pointer font-semibold text-sm px-[18px] py-2 h-[42px] border border-[rgb(95,125,255)] hover:bg-[rgb(95,125,255)] hover:border-white active:scale-95 active:bg-[rgb(80,110,240)] transition-all duration-200"
         >
           Fazer Orçamento

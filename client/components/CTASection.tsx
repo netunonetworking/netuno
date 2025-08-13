@@ -20,7 +20,7 @@ export default function CTASection() {
           </p>
         </div>
         <Link
-          to="/orcamento"
+          to="/servicos"
           onClick={() => window.scrollTo(0, 0)}
           className="bg-white text-[rgba(8,8,51,1)] rounded-2xl text-center cursor-pointer font-semibold text-sm px-[18px] py-2 h-[42px] border border-[rgb(209,213,220)] leading-5 hover:opacity-90 transition-opacity"
         >
