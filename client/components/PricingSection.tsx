@@ -402,6 +402,13 @@ export default function PricingSection() {
               <div className="text-center">
                 <Button
                   size="lg"
+                  onClick={() => {
+                    const numeroZap = "554196880856";
+                    const mensagem =
+                      "Olá! Tenho interesse no Plano Teste da Netuno. Quero entender como funciona e começar o quanto antes.";
+                    const url = `https://wa.me/${numeroZap}?text=${encodeURIComponent(mensagem)}`;
+                    window.open(url, "_blank");
+                  }}
                   className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-6 text-xl font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
                 >
                   <RocketLaunchIcon className="mr-3 h-6 w-6" />

@@ -343,7 +343,11 @@ export default function ModernFaq() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
-                  href="https://wa.me/SEUNUMERO"
+                  href={`https://wa.me/554196880856?text=${encodeURIComponent(
+                    "Olá! Tenho algumas dúvidas sobre os serviços da Netuno. Poderia me ajudar?",
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group inline-flex items-center justify-center bg-white text-blue-700 rounded-2xl font-semibold px-8 py-4 transition-all duration-300 hover:bg-blue-50 hover:scale-105 hover:shadow-xl"
                 >
                   <MessageCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
@@ -359,7 +363,7 @@ export default function ModernFaq() {
               </div>
 
               <p className="text-blue-200 text-sm mt-6">
-                Resposta em até 30 minutos • Atendimento humanizado
+                Resposta rápida • Atendimento humanizado
               </p>
             </div>
           </div>

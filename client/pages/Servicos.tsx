@@ -15,6 +15,8 @@ import { useState } from "react";
 export default function ModernServicos() {
   const [hoveredCard, setHoveredCard] = useState(null);
 
+  const numeroZap = "554196880856";
+
   const services = [
     {
       id: "landing",
@@ -33,6 +35,8 @@ export default function ModernServicos() {
       ],
       cta: "Quero minha Landing Page",
       color: "blue",
+      message:
+        "Olá! Tenho interesse em criar uma Landing Page que converta. Gostaria de saber mais detalhes e valores.",
     },
     {
       id: "sites",
@@ -53,6 +57,8 @@ export default function ModernServicos() {
       ],
       cta: "Quero meu Site Institucional",
       color: "indigo",
+      message:
+        "Olá! Tenho interesse em um Site Institucional profissional. Quero entender como vocês podem me ajudar.",
     },
     {
       id: "sistemas",
@@ -92,8 +98,15 @@ export default function ModernServicos() {
       ],
       cta: "Quero um Sistema Personalizado",
       color: "purple",
+      message:
+        "Olá! Tenho interesse em um Sistema Personalizado para o meu negócio. Podemos conversar?",
     },
   ];
+
+  const handleClick = (message) => {
+    const url = `https://wa.me/${numeroZap}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  };
 
   return (
     <div className="min-h-screen bg-slate-50 font-figtree">
@@ -228,7 +241,10 @@ export default function ModernServicos() {
 
                   {/* CTA Button */}
                   <div className="pt-4">
-                    <button className="group/btn relative inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:bg-blue-700 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/25">
+                    <button
+                      onClick={() => handleClick(service.message)}
+                      className="group/btn relative inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:bg-blue-700 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/25"
+                    >
                       <span className="relative z-10">{service.cta}</span>
                       <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1" />
                     </button>
