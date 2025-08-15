@@ -103,7 +103,7 @@ export default function Footer() {
           <div className="flex justify-end items-start gap-8 flex-1">
             <FooterSection title="Sobre">
               <FooterLink href="/servicos">Serviços</FooterLink>
-              <FooterLink href="https://linktr.ee/othaviolr">
+              <FooterLink href="https://linktr.ee/netunotech">
                 Contato
               </FooterLink>
               <FooterLink href="/portfolio">Portifólio</FooterLink>
@@ -124,30 +124,51 @@ export default function Footer() {
             Copyright © 2025 Netuno. Todos os direitos reservados
           </div>
 
+          {/* Redes Sociais */}
           <div className="flex items-center gap-4">
-            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white">
+            {/* WhatsApp */}
+            <a
+              href={`https://wa.me/554196880856?text=${encodeURIComponent(
+                "Olá! Tenho interesse em saber mais sobre os serviços da Netuno.",
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-8 h-8 rounded-full bg-white"
+            >
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/b747d13294de27f0e89525a5ab5ec0c0394bc17f?width=32"
-                alt="Social media"
+                alt="WhatsApp"
                 className="w-4 h-4"
               />
-            </div>
+            </a>
 
-            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white">
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/netunotech/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-8 h-8 rounded-full bg-white"
+            >
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/9ee82df6692353d6065a48d22e8624101b220547?width=32"
-                alt="Social media"
+                alt="Instagram"
                 className="w-4 h-4"
               />
-            </div>
+            </a>
 
-            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white">
+            {/* TikTok */}
+            <a
+              href="https://www.tiktok.com/@netunotech"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-8 h-8 rounded-full bg-white"
+            >
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/bfff622729108b34cc0b5773816481f2b3ad504f?width=32"
-                alt="Social media"
+                alt="TikTok"
                 className="w-4 h-4"
               />
-            </div>
+            </a>
           </div>
         </div>
       </div>
