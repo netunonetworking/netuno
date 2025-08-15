@@ -65,7 +65,7 @@ export default function PricingSection() {
       <div className="flex flex-col items-center gap-20 w-full max-w-7xl">
         {/* Cabeçalho modernizado */}
         <div className="flex flex-col items-center gap-6 w-full text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
             Nossos Serviços
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl leading-relaxed">

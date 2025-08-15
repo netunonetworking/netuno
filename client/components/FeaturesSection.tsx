@@ -14,11 +14,11 @@ function Feature({ title, description, icon: Icon }: FeatureProps) {
       </div>
 
       <div className="flex flex-col items-center gap-2 w-full">
-        <h3 className="text-center text-gray-900 font-sans text-xl font-semibold leading-relaxed">
+        <h3 className="text-center text-slate-900 text-xl font-semibold leading-relaxed">
           {title}
         </h3>
 
-        <p className="text-center text-gray-600 font-sans text-base leading-relaxed">
+        <p className="text-center text-slate-600 text-base leading-relaxed">
           {description}
         </p>
       </div>
@@ -34,11 +34,11 @@ export default function FeaturesSection() {
         style={{ maxWidth: "1280px" }}
       >
         <div className="flex flex-col items-center gap-4 w-full">
-          <h2 className="text-center text-gray-900 font-sans text-4xl font-semibold leading-tight">
+          <h2 className="text-4xl font-bold text-slate-900 mb-6 leading-tight text-center">
             Por que escolher a Netuno?
           </h2>
 
-          <p className="text-center text-gray-600 font-sans text-xl leading-relaxed">
+          <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed text-center">
             Uma pergunta que você não precisa ter em sua mente
           </p>
         </div>
