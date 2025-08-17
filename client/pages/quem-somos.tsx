@@ -108,13 +108,13 @@ const QuemSomos: React.FC = () => {
               <div className="bg-gradient-to-br from-[#1E1DF5] to-cyan-600 rounded-2xl p-8 text-white">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold mb-2">5+</div>
+                    <div className="text-3xl font-bold mb-2">3+</div>
                     <div className="text-cyan-100 text-sm">
                       Anos de Experiência
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold mb-2">100+</div>
+                    <div className="text-3xl font-bold mb-2">50+</div>
                     <div className="text-cyan-100 text-sm">
                       Projetos Entregues
                     </div>
@@ -294,7 +294,11 @@ const QuemSomos: React.FC = () => {
             Entre em contato e vamos criar algo incrível juntos.
           </p>
           <a
-            href="/contato"
+            href={`https://wa.me/554196880856?text=${encodeURIComponent(
+              "Olá! Tenho algumas dúvidas sobre os serviços da Netuno. Poderia me ajudar?",
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-white text-[#1E1DF5] px-10 py-4 rounded-xl font-bold hover:bg-blue-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 border border-white/20"
           >
             Fale Conosco
