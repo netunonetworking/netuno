@@ -29,43 +29,40 @@ export default function Portfolio() {
     },
     {
       id: 2,
-      title: "Sistema de Gestão Empresarial",
-      description:
-        "Desenvolvimento completo de sistema ERP personalizado para indústria de médio porte.",
-      tags: ["Desenvolvimento", "Sistemas"],
-      image: "/portfolio/projeto2.jpg",
+      title: "Portifólio Empresarial",
+      description: "Desenvolvimento de um Curriculo Online.",
+      tags: ["Landing Page", "Site"],
+      image: "/projeto2.png",
     },
     {
       id: 3,
-      title: "Campanha de Marketing Digital",
+      title: "Site de Escanear Redações",
       description:
-        "Estratégia completa de marketing digital que aumentou conversões em 150%.",
-      tags: ["Marketing", "Branding"],
-      image: "/portfolio/projeto3.jpg",
+        "Desenvolvimento de um site para escanear e analisar redações.",
+      tags: ["Site", "Sistema"],
+      image: "/projeto3.png",
     },
     {
       id: 4,
-      title: "Aplicativo Mobile",
-      description:
-        "Aplicativo de saúde e bem-estar com integração a wearables.",
-      tags: ["Mobile", "UI/UX"],
-      image: "/portfolio/projeto4.jpg",
+      title: "Software de Gestão de Obras",
+      description: "Aplicativo de gerenciamento e cadastro de obras.",
+      tags: ["Sistema", "ERP"],
+      image: "/projeto4.png",
     },
     {
       id: 5,
-      title: "Redesign de Website",
-      description:
-        "Atualização completa do website corporativo com foco em performance e SEO.",
-      tags: ["Web Design", "SEO"],
-      image: "/portfolio/projeto5.jpg",
+      title: "E-commerce de Produtos Solares",
+      description: "Loja virtual especializada em produtos solares.",
+      tags: ["Sistema", "ERP"],
+      image: "/projeto5.png",
     },
     {
       id: 6,
-      title: "Sistema de Automação",
+      title: "Sistema para Gestão de Loja",
       description:
-        "Automação de processos internos reduzindo tempo de operação em 70%.",
-      tags: ["Desenvolvimento", "Automação"],
-      image: "/portfolio/projeto6.jpg",
+        "Sistema completo para gestão de lojas, incluindo controle de estoque e vendas.",
+      tags: ["Site", "Sistema"],
+      image: "/projeto6.png",
     },
   ];
 
@@ -93,11 +90,9 @@ export default function Portfolio() {
 
         <div className="max-w-7xl mx-auto relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Nosso{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Portfólio
-            </span>
+            Nosso <span className="text-white">Portfólio</span>
           </h1>
+
           <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
             Explore nossos projetos mais recentes e veja como transformamos
             ideias em soluções incríveis.
