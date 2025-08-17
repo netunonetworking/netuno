@@ -11,6 +11,7 @@ import Faq from "./pages/Faq";
 import Portfolio from "./pages/Portfolio";
 import Politica from "./pages/Politica";
 import Termos from "./pages/Termos";
+import QuemSomos from "./pages/quem-somos";
 import NotFound from "./pages/NotFound";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
@@ -89,6 +90,15 @@ const App = () => (
             element={
               <Layout>
                 <Termos />
+              </Layout>
+            }
+          />
+
+          <Route
+            path="/quem-somos"
+            element={
+              <Layout>
+                <QuemSomos />
               </Layout>
             }
           />

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const NetunoLogo = () => (
   <svg width="47" height="26" viewBox="0 0 47 26" className="h-7 w-auto">
@@ -12,13 +13,6 @@ const NetunoLogo = () => (
       d="M27.9.6c3.5.8 8 6.3 6.9 5.9-1.1-.4-22.2-.9-22.2 0 0 .9 27.1 3 27.1 3 8.2 2 6.8 3.5 6.8 3.5.3 1.7-4 2.1-4 2.1-13.5-.4-12.7 0-12.7 0 8.6.1 6.1-1.8 4.6-3.6-1.5-1.8-30.3-3.8-31.8-6.5C3.4 3.7 15.9 2.5 15.9 2.5c2.6-2.2 5.2-2.3 7.9-2.4 2.6-.1 3.3-.3 6.8.5z"
     />
   </svg>
-);
-
-// Simulação do Link do React Router para o artifact
-const Link = ({ to, children, onClick, className }) => (
-  <a href={to} onClick={onClick} className={className}>
-    {children}
-  </a>
 );
 
 export default function ModernHeader() {
@@ -34,7 +28,8 @@ export default function ModernHeader() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleNavClick = (e, targetId) => {
+  // Função para lidar com links âncora (scroll na mesma página)
+  const handleAnchorClick = (e, targetId) => {
     e.preventDefault();
     const element = document.getElementById(targetId);
     if (element) {
@@ -46,21 +41,29 @@ export default function ModernHeader() {
     setIsMobileMenuOpen(false);
   };
 
+  // Função para fechar menu mobile em navegação normal
+  const handleNavigation = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   const navItems = [
     {
       label: "Quem Somos",
-      href: "#quem-somos",
-      onClick: (e) => handleNavClick(e, "quem-somos"),
+      href: "/quem-somos",
+      type: "route", // Tipo: rota do React Router
+      onClick: handleNavigation,
     },
     {
       label: "Portfólio",
       href: "/portfolio",
-      onClick: () => setIsMobileMenuOpen(false),
+      type: "route", // Tipo: rota do React Router
+      onClick: handleNavigation,
     },
     {
       label: "Saiba Mais",
       href: "#contato",
-      onClick: (e) => handleNavClick(e, "contato"),
+      type: "anchor", // Tipo: âncora (scroll)
+      onClick: (e) => handleAnchorClick(e, "contato"),
     },
   ];
 
@@ -78,7 +81,6 @@ export default function ModernHeader() {
             {/* Logo */}
             <Link
               to="/"
-              onClick={() => {}}
               className="flex items-center group transition-transform duration-300 hover:scale-105"
             >
               <div className="relative">
@@ -91,18 +93,37 @@ export default function ModernHeader() {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center">
               <div className="flex items-center gap-1 bg-slate-50/80 backdrop-blur-sm rounded-2xl p-1 border border-slate-200/50">
-                {navItems.map((item, index) => (
-                  <Link
-                    key={index}
-                    to={item.href}
-                    onClick={item.onClick}
-                    className="relative px-6 py-3 text-slate-700 font-medium text-sm rounded-xl transition-all duration-300 hover:text-blue-600 hover:bg-white hover:shadow-sm group"
-                  >
-                    {item.label}
-                    {/* Underline animation */}
-                    <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full transition-all duration-300 group-hover:w-8"></div>
-                  </Link>
-                ))}
+                {navItems.map((item, index) => {
+                  // Se for uma rota, usa Link do React Router
+                  if (item.type === "route") {
+                    return (
+                      <Link
+                        key={index}
+                        to={item.href}
+                        onClick={item.onClick}
+                        className="relative px-6 py-3 text-slate-700 font-medium text-sm rounded-xl transition-all duration-300 hover:text-blue-600 hover:bg-white hover:shadow-sm group"
+                      >
+                        {item.label}
+                        {/* Underline animation */}
+                        <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full transition-all duration-300 group-hover:w-8"></div>
+                      </Link>
+                    );
+                  }
+
+                  // Se for âncora, usa tag a normal com onClick
+                  return (
+                    <a
+                      key={index}
+                      href={item.href}
+                      onClick={item.onClick}
+                      className="relative px-6 py-3 text-slate-700 font-medium text-sm rounded-xl transition-all duration-300 hover:text-blue-600 hover:bg-white hover:shadow-sm group"
+                    >
+                      {item.label}
+                      {/* Underline animation */}
+                      <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full transition-all duration-300 group-hover:w-8"></div>
+                    </a>
+                  );
+                })}
               </div>
             </nav>
 
@@ -141,16 +162,33 @@ export default function ModernHeader() {
           <div className="bg-white/95 backdrop-blur-md border-t border-slate-200/50">
             <div className="container mx-auto px-4 py-4">
               <nav className="space-y-2">
-                {navItems.map((item, index) => (
-                  <Link
-                    key={index}
-                    to={item.href}
-                    onClick={item.onClick}
-                    className="block px-4 py-3 text-slate-700 font-medium rounded-xl transition-all duration-300 hover:bg-slate-50 hover:text-blue-600 hover:pl-6"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+                {navItems.map((item, index) => {
+                  // Se for uma rota, usa Link do React Router
+                  if (item.type === "route") {
+                    return (
+                      <Link
+                        key={index}
+                        to={item.href}
+                        onClick={item.onClick}
+                        className="block px-4 py-3 text-slate-700 font-medium rounded-xl transition-all duration-300 hover:bg-slate-50 hover:text-blue-600 hover:pl-6"
+                      >
+                        {item.label}
+                      </Link>
+                    );
+                  }
+
+                  // Se for âncora, usa tag a normal com onClick
+                  return (
+                    <a
+                      key={index}
+                      href={item.href}
+                      onClick={item.onClick}
+                      className="block px-4 py-3 text-slate-700 font-medium rounded-xl transition-all duration-300 hover:bg-slate-50 hover:text-blue-600 hover:pl-6"
+                    >
+                      {item.label}
+                    </a>
+                  );
+                })}
               </nav>
             </div>
           </div>
