@@ -3,16 +3,11 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const NetunoLogo = () => (
-  <svg width="47" height="26" viewBox="0 0 47 26" className="h-7 w-auto">
-    <path
-      fill="#1D1DF4"
-      d="M19.2 25.4c-3.5-.8-8-6.3-6.9-5.9 1.1.4 22.2.9 22.2 0 0-.9-27.1-3-27.1-3-8.2-2-6.8-3.5-6.8-3.5-.3-1.7 4-2.1 4-2.1 13.5-.4 12.7 0 12.7 0-8.6.1-6.1 1.8-4.6 3.6 1.5 1.8 30.3 3.8 31.8 6.5 1.5 2.7-11 4-11 4-2.6 2.2-5.2 2.3-7.9 2.4-2.6.1-3.3.4-6.8-.4z"
-    />
-    <path
-      fill="#1D1DF4"
-      d="M27.9.6c3.5.8 8 6.3 6.9 5.9-1.1-.4-22.2-.9-22.2 0 0 .9 27.1 3 27.1 3 8.2 2 6.8 3.5 6.8 3.5.3 1.7-4 2.1-4 2.1-13.5-.4-12.7 0-12.7 0 8.6.1 6.1-1.8 4.6-3.6-1.5-1.8-30.3-3.8-31.8-6.5C3.4 3.7 15.9 2.5 15.9 2.5c2.6-2.2 5.2-2.3 7.9-2.4 2.6-.1 3.3-.3 6.8.5z"
-    />
-  </svg>
+  <img
+    src="/Logo.svg"
+    alt="Netuno Logo"
+    className="h-10 w-auto object-contain flex-shrink-0"
+  />
 );
 
 export default function ModernHeader() {
