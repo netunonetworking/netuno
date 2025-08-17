@@ -23,9 +23,9 @@ export default function Portfolio() {
       title: "Sistema de Livraria",
       description:
         "Criação de um Sistema e-commerce e interatividade de Livros",
-      tags: ["Sistema", "Web Design"],
+      tags: ["Sistema", "Site"],
       image: "/projeto1.png",
-      link: "https://exemplo.com/projeto1",
+      link: "https://web-livraria-front-git-develop-othaviolrs-projects.vercel.app/",
     },
     {
       id: 2,
@@ -70,7 +70,7 @@ export default function Portfolio() {
   ];
 
   // Filtros disponíveis
-  const filters = ["todos", "UI/UX", "Desenvolvimento", "Marketing", "Mobile"];
+  const filters = ["todos", "Landing Page", "Site", "Sistema", "ERP"];
 
   // Filtrar projetos
   const filteredProjects =
