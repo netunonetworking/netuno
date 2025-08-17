@@ -110,9 +110,7 @@ export default function Footer() {
             </FooterSection>
 
             <FooterSection title="Política">
-              <FooterLink href="/privacidade">
-                Politica de privacidade
-              </FooterLink>
+              <FooterLink href="/politica">Politica de privacidade</FooterLink>
               <FooterLink href="/termos">Termos de uso</FooterLink>
               <FooterLink href="/faq">Perguntas Frequentes</FooterLink>
             </FooterSection>
