@@ -9,6 +9,8 @@ import Index from "./pages/Index";
 import Servicos from "./pages/Servicos";
 import Faq from "./pages/Faq";
 import Portfolio from "./pages/Portfolio";
+import Politica from "./pages/Politica";
+import Termos from "./pages/Termos";
 import NotFound from "./pages/NotFound";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
@@ -69,6 +71,24 @@ const App = () => (
             element={
               <Layout>
                 <Portfolio />
+              </Layout>
+            }
+          />
+
+          <Route
+            path="/politica"
+            element={
+              <Layout>
+                <Politica />
+              </Layout>
+            }
+          />
+
+          <Route
+            path="/termos"
+            element={
+              <Layout>
+                <Termos />
               </Layout>
             }
           />
