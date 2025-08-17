@@ -145,15 +145,15 @@ export default function ModernFaq() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20">
       <Header />
       {/* Hero Section com gradiente moderno */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-800">
+      <div className="relative overflow-hidden bg-[#1E1DF5]">
         {/* Elementos decorativos de fundo */}
         <div className="absolute inset-0 bg-black/10"></div>
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-r from-blue-400/20 to-indigo-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-white/10 rounded-full blur-3xl"></div>
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-8 pt-32 pb-20">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-white/30">
-              <Sparkles className="w-4 h-4 text-yellow-300" />
+              <Sparkles className="w-4 h-4 text-white" />
               <span className="text-sm font-medium text-white">
                 FAQ - Plano Teste
               </span>
@@ -161,16 +161,15 @@ export default function ModernFaq() {
 
             <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6 leading-tight">
               Tire todas suas
-              <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">
                 {" "}
                 dúvidas
               </span>
             </h1>
 
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-10 leading-relaxed">
+            <p className="text-xl text-white/80 max-w-3xl mx-auto mb-10 leading-relaxed">
               Tudo que você precisa saber sobre nosso plano de teste de 30 dias
-              por apenas{" "}
-              <span className="font-bold text-yellow-300">R$ 59</span>
+              por apenas <span className="font-bold text-cyan-300">R$ 59</span>
             </p>
 
             {/* Barra de pesquisa moderna */}
@@ -179,14 +178,14 @@ export default function ModernFaq() {
                 <input
                   type="text"
                   placeholder="Pesquisar nas perguntas..."
-                  className="w-full px-6 py-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:border-transparent transition-all duration-300"
+                  className="w-full px-6 py-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:border-transparent transition-all duration-300"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
                 <div className="absolute right-4 top-1/2 -translate-y-1/2">
                   <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
                     <svg
-                      className="w-4 h-4 text-blue-200"
+                      className="w-4 h-4 text-white/80"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -210,13 +209,13 @@ export default function ModernFaq() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
                 >
-                  <div className="text-yellow-300 mb-3 group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-cyan-300 mb-3 group-hover:scale-110 transition-transform duration-300">
                     {highlight.icon}
                   </div>
                   <h3 className="font-semibold text-white mb-1">
                     {highlight.title}
                   </h3>
-                  <p className="text-sm text-blue-200">
+                  <p className="text-sm text-white/80">
                     {highlight.description}
                   </p>
                 </div>
@@ -232,7 +231,7 @@ export default function ModernFaq() {
           <div className="mb-8 text-center">
             <p className="text-slate-600">
               Encontradas{" "}
-              <span className="font-semibold text-blue-600">
+              <span className="font-semibold text-[#1E1DF5]">
                 {filteredFaqItems.length}
               </span>{" "}
               perguntas para "{searchTerm}"
@@ -244,12 +243,12 @@ export default function ModernFaq() {
           {filteredFaqItems.map((item, index) => (
             <div
               key={index}
-              className="group bg-white rounded-2xl border border-slate-200 overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 hover:border-blue-200"
+              className="group bg-white rounded-2xl border border-slate-200 overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#1E1DF5]/10 hover:border-blue-200"
             >
               <button
                 className={`flex justify-between items-center w-full p-6 text-left transition-all duration-300 ${
                   activeIndex === index
-                    ? "bg-gradient-to-r from-blue-50 to-indigo-50"
+                    ? "bg-gradient-to-r from-blue-50 to-cyan-50"
                     : "bg-white group-hover:bg-slate-50"
                 }`}
                 onClick={() => toggleAccordion(index)}
@@ -257,8 +256,8 @@ export default function ModernFaq() {
                 <h3
                   className={`text-lg font-semibold transition-colors duration-300 ${
                     activeIndex === index
-                      ? "text-blue-700"
-                      : "text-slate-800 group-hover:text-blue-600"
+                      ? "text-[#1E1DF5]"
+                      : "text-slate-800 group-hover:text-[#1E1DF5]"
                   }`}
                 >
                   {item.question}
@@ -266,8 +265,8 @@ export default function ModernFaq() {
                 <div
                   className={`flex-shrink-0 ml-4 p-2 rounded-full transition-all duration-300 ${
                     activeIndex === index
-                      ? "bg-blue-100 text-blue-600 rotate-180"
-                      : "bg-slate-100 text-slate-500 group-hover:bg-blue-50 group-hover:text-blue-500"
+                      ? "bg-blue-100 text-[#1E1DF5] rotate-180"
+                      : "bg-slate-100 text-slate-500 group-hover:bg-blue-50 group-hover:text-[#1E1DF5]"
                   }`}
                 >
                   <ChevronDown size={16} />
@@ -282,7 +281,7 @@ export default function ModernFaq() {
                 }`}
               >
                 <div className="px-6 pb-6">
-                  <div className="w-12 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 mb-4 rounded-full"></div>
+                  <div className="w-12 h-0.5 bg-gradient-to-r from-[#1E1DF5] to-cyan-500 mb-4 rounded-full"></div>
                   <p className="text-slate-600 leading-relaxed">
                     {item.answer}
                   </p>
@@ -320,14 +319,14 @@ export default function ModernFaq() {
 
         {/* CTA Section modernizada */}
         <div className="mt-20">
-          <div className="relative bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-800 rounded-3xl p-8 md:p-12 overflow-hidden">
+          <div className="relative bg-[#1E1DF5] rounded-3xl p-8 md:p-12 overflow-hidden">
             {/* Elementos decorativos */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-white/10 to-transparent rounded-full blur-2xl"></div>
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-yellow-300/20 to-transparent rounded-full blur-2xl"></div>
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-cyan-300/20 to-transparent rounded-full blur-2xl"></div>
 
             <div className="relative text-center">
               <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-white/30">
-                <MessageCircle className="w-4 h-4 text-yellow-300" />
+                <MessageCircle className="w-4 h-4 text-cyan-300" />
                 <span className="text-sm font-medium text-white">
                   Suporte 24h
                 </span>
@@ -336,7 +335,7 @@ export default function ModernFaq() {
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ainda com dúvidas?
               </h3>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
                 Nossa equipe está pronta para esclarecer qualquer dúvida
                 adicional sobre o Plano Teste
               </p>
@@ -348,7 +347,7 @@ export default function ModernFaq() {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center justify-center bg-white text-blue-700 rounded-2xl font-semibold px-8 py-4 transition-all duration-300 hover:bg-blue-50 hover:scale-105 hover:shadow-xl"
+                  className="group inline-flex items-center justify-center bg-white text-[#1E1DF5] rounded-2xl font-semibold px-8 py-4 transition-all duration-300 hover:bg-blue-50 hover:scale-105 hover:shadow-xl"
                 >
                   <MessageCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
                   Falar no WhatsApp
@@ -362,7 +361,7 @@ export default function ModernFaq() {
                 </a>
               </div>
 
-              <p className="text-blue-200 text-sm mt-6">
+              <p className="text-white/80 text-sm mt-6">
                 Resposta rápida • Atendimento humanizado
               </p>
             </div>
