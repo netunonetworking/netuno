@@ -149,7 +149,11 @@ export default function Portfolio() {
             Entre em contato e vamos criar algo incrível juntos.
           </p>
           <a
-            href="/contato"
+            href={`https://wa.me/554196880856?text=${encodeURIComponent(
+              "Olá! Tenho algumas dúvidas sobre os serviços da Netuno. Poderia me ajudar?",
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-white text-[#1E1DF5] px-10 py-4 rounded-xl font-bold hover:bg-blue-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 border border-white/20"
           >
             Fale Conosco

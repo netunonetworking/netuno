@@ -354,7 +354,7 @@ export default function ModernFaq() {
                 </a>
 
                 <a
-                  href="mailto:contato@netuno.com"
+                  href="mailto:netunonetworking@gmail.com"
                   className="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm text-white rounded-2xl font-medium px-8 py-4 border border-white/30 transition-all duration-300 hover:bg-white/20 hover:scale-105"
                 >
                   Enviar email
