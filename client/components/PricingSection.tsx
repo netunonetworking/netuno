@@ -419,10 +419,22 @@ export default function PricingSection() {
                     const url = `https://wa.me/${numeroZap}?text=${encodeURIComponent(mensagem)}`;
                     window.open(url, "_blank");
                   }}
-                  className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                  className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-4 sm:px-8 md:px-12 py-3 sm:py-4 md:py-6 text-sm sm:text-lg md:text-xl font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
                 >
-                  <RocketLaunchIcon className="mr-2 sm:mr-3 h-5 w-5 sm:h-6 sm:w-6" />
-                  <span className="text-center">
+                  <RocketLaunchIcon className="mr-2 sm:mr-3 h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
+
+                  {/* Texto para mobile */}
+                  <span className="block sm:hidden text-center">
+                    Plano Teste R$ 59
+                  </span>
+
+                  {/* Texto para tablet */}
+                  <span className="hidden sm:block md:hidden text-center">
+                    Começar Plano Teste (R$ 59)
+                  </span>
+
+                  {/* Texto completo para desktop */}
+                  <span className="hidden md:block text-center">
                     Começar Plano Teste (R$ 59,00 promoção)
                   </span>
                 </Button>
