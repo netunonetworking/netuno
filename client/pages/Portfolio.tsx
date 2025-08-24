@@ -29,10 +29,11 @@ export default function Portfolio() {
     },
     {
       id: 2,
-      title: "Portifólio Empresarial",
-      description: "Desenvolvimento de um Curriculo Online.",
-      tags: ["Landing Page", "Site"],
-      image: "/projeto2.png",
+      title: "E-commerce de Paisagismo",
+      description:
+        "Desenvolvimento de um site para venda de produtos de paisagismo.",
+      tags: ["Sistema", "Site"],
+      image: "/projeto7.png",
     },
     {
       id: 3,
