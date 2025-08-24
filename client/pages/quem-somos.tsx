@@ -4,11 +4,11 @@ import Footer from "../components/Footer";
 
 const QuemSomos: React.FC = () => {
   return (
-    <>
+    <div className="bg-[#1E1DF5]">
       <Header />
 
-      {/* Hero Section */}
-      <section className="relative bg-[#1E1DF5] py-32 px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
+      {/* Hero Section - REMOVIDO todo o padding e margin superior */}
+      <section className="relative bg-[#1E1DF5] pb-16 px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
@@ -16,7 +16,9 @@ const QuemSomos: React.FC = () => {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="max-w-4xl mx-auto relative z-10">
+        <div className="max-w-4xl mx-auto relative z-10 pt-16">
+          {" "}
+          {/* Adicionado pt-16 aqui */}
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">
             Conectados com a nova geração do{" "}
             <span className="bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">
@@ -307,7 +309,7 @@ const QuemSomos: React.FC = () => {
       </section>
 
       <Footer />
-    </>
+    </div>
   );
 };
 

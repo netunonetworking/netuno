@@ -71,7 +71,7 @@ export default function ModernHeader() {
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14 sm:h-16 lg:h-18">
+        <div className="flex items-center justify-between py-2">
           {/* Logo */}
           <Link
             to="/"
@@ -95,11 +95,11 @@ export default function ModernHeader() {
                       key={index}
                       to={item.href}
                       onClick={item.onClick}
-                      className="relative px-4 lg:px-6 py-2 lg:py-3 text-slate-700 font-medium text-sm rounded-xl transition-all duration-300 hover:text-blue-600 hover:bg-white hover:shadow-sm group"
+                      className="relative px-4 lg:px-5 py-2 text-slate-700 font-medium text-sm rounded-xl transition-all duration-300 hover:text-blue-600 hover:bg-white hover:shadow-sm group"
                     >
                       {item.label}
                       {/* Underline animation */}
-                      <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full transition-all duration-300 group-hover:w-6 lg:group-hover:w-8"></div>
+                      <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full transition-all duration-300 group-hover:w-6"></div>
                     </Link>
                   );
                 }
@@ -110,11 +110,11 @@ export default function ModernHeader() {
                     key={index}
                     href={item.href}
                     onClick={item.onClick}
-                    className="relative px-4 lg:px-6 py-2 lg:py-3 text-slate-700 font-medium text-sm rounded-xl transition-all duration-300 hover:text-blue-600 hover:bg-white hover:shadow-sm group"
+                    className="relative px-4 lg:px-5 py-2 text-slate-700 font-medium text-sm rounded-xl transition-all duration-300 hover:text-blue-600 hover:bg-white hover:shadow-sm group"
                   >
                     {item.label}
                     {/* Underline animation */}
-                    <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full transition-all duration-300 group-hover:w-6 lg:group-hover:w-8"></div>
+                    <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full transition-all duration-300 group-hover:w-6"></div>
                   </a>
                 );
               })}
